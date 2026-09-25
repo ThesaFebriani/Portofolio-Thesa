@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thesa Febriani | Curriculum Vitae</title>
+    <style>
+      :root {
+        --bg: #07111f;
+        --panel: #0f1d30;
+        --card: #14273d;
+        --text: #edf3ff;
+        --muted: #b9c7e3;
+        --line: rgba(255, 255, 255, 0.1);
+        --primary: #8ea6ff;
+        --gold: #f4c66f;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: linear-gradient(180deg, #07111f, #0d1828);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      .page {
+        max-width: 1100px;
+        margin: 36px auto;
+        background: rgba(18, 28, 42, 0.9);
+        border: 1px solid var(--line);
+        border-radius: 24px;
+        overflow: hidden;
+      }
+
+      .topbar {
+        padding: 26px 42px 18px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .name {
+        font-size: 2.2rem;
+        font-weight: 700;
+        letter-spacing: -0.05em;
+      }
+
+      .tag {
+        color: var(--gold);
+        font-size: 0.82rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+      }
+
+      .actions a,
+      .actions button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 42px;
+        padding: 0 18px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.02);
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: 0.9fr 1.5fr;
+        gap: 28px;
+        padding: 32px 42px 42px;
+      }
+
+      .sidebar,
+      .main {
+        display: grid;
+        gap: 26px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.02);
+        padding: 20px;
+      }
+
+      h3 {
+        margin: 0 0 10px;
+        font-size: 0.9rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--gold);
+      }
+
+      p,
+      li {
+        color: var(--muted);
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 18px;
+      }
+
+      .contact-list {
+        display: grid;
+        gap: 8px;
+      }
+
+      .main .card {
+        padding: 22px 22px 18px;
+      }
+
+      .exp-item,
+      .edu-item {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .exp-item:last-child,
+      .edu-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+
+      .role {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 5px;
+      }
+
+      .meta {
+        color: var(--primary);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .skill-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .skill-pills span {
+        display: inline-flex;
+        align-items: center;
+        padding: 7px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--line);
+        color: var(--text);
+        background: rgba(255, 255, 255, 0.02);
+        font-size: 0.72rem;
+      }
+
+      @media (max-width: 760px) {
+        .topbar,
+        .content {
+          grid-template-columns: 1fr;
+          display: grid;
+        }
+
+        .topbar {
+          padding: 20px;
+        }
+
+        .content {
+          padding: 20px;
+        }
+
+        .actions {
+          flex-wrap: wrap;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <div class="topbar">
+        <div>
+          <div class="name">Thesa Febriani</div>
+          <div class="tag">Information Systems Graduate</div>
+        </div>
+        <div class="actions">
+          <a href="index.html">Back to Portfolio</a>
+          <button type="button" onclick="window.print()">
+            Print / Save PDF
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <aside class="sidebar">
+          <div class="card">
+            <h3>Profile</h3>
+            <p>
+              Information Systems fresh graduate from Universitas Bengkulu with
+              a GPA of 3.88/4.00, specializing in web development and system
+              analysis with a strong interest in creating structured,
+              user-friendly and impactful digital solutions.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Contact</h3>
+            <div class="contact-list">
+              <div>Email: thesafebriani024@gmail.com</div>
+              <div>Phone: +62 822-9952-9325</div>
+              <div>LinkedIn: linkedin.com/in/thesafebriani</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Core Skills</h3>
+            <div class="skill-pills">
+              <span>Web Development</span>
+              <span>System Analysis</span>
+              <span>Laravel</span>
+              <span>MySQL</span>
+              <span>SQL</span>
+              <span>Figma</span>
+              <span>UML</span>
+              <span>Bizagi</span>
+              <span>Google Cloud</span>
+              <span>Project Leadership</span>
+            </div>
+          </div>
+        </aside>
+
+        <main class="main">
+          <div class="card">
+            <h3>Education</h3>
+            <div class="edu-item">
+              <div class="role">Bachelor of Information Systems</div>
+              <div class="meta">Universitas Bengkulu | 2022 - 2026</div>
+              <p>GPA: 3.88 / 4.00</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Experience</h3>
+
+            <div class="exp-item">
+              <div class="role">Head of Education and Training Department</div>
+              <div class="meta">
+                Engineering Research Community (ERCOM FT KBM UNIB) | Jan 2025 -
+                Dec 2025
+              </div>
+              <ul>
+                <li>
+                  Led training programs on scientific writing, entrepreneurship,
+                  and graphic design.
+                </li>
+                <li>
+                  Developed curriculum, syllabi, guides, and evaluation reports.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="role">Student Intern</div>
+              <div class="meta">Telkom Indonesia | Feb 2025 - May 2025</div>
+              <ul>
+                <li>
+                  Developed and supported internal chatbot service operations.
+                </li>
+                <li>
+                  Contributed to conversation flow design and service efficiency
+                  improvements.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="role">
+                Laboratory Assistant for Probability and Statistics
+              </div>
+              <div class="meta">Universitas Bengkulu | Jan 2025 - May 2025</div>
+              <ul>
+                <li>
+                  Guided students in using Excel and SPSS for quantitative
+                  analysis.
+                </li>
+                <li>
+                  Evaluated practical reports and provided constructive
+                  feedback.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="role">
+                Head Coordinator of Public Relations NEON 2024
+              </div>
+              <div class="meta">ERCOM FT KBM UNIB | Sep 2024 - Nov 2024</div>
+              <ul>
+                <li>
+                  Led a team of 10 in event promotion with national reach.
+                </li>
+                <li>
+                  Built partnerships with media and external organizations.
+                </li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="role">
+                Laboratory Assistant — Introduction to Database Systems
+              </div>
+              <div class="meta">Universitas Bengkulu | Aug 2024 - Dec 2024</div>
+              <ul>
+                <li>
+                  Guided 37 students in database design, normalization, and SQL.
+                </li>
+                <li>Evaluated reports, assignments, and practical exams.</li>
+              </ul>
+            </div>
+
+            <div class="exp-item">
+              <div class="role">Cloud Computing Cohort</div>
+              <div class="meta">
+                Bangkit Academy led by Google, Tokopedia, Gojek, &amp; Traveloka
+                | Aug 2024 - Jan 2025
+              </div>
+              <ul>
+                <li>Completed cloud learning path on Google Cloud Platform.</li>
+                <li>
+                  Worked on team-based problem solving and cloud infrastructure
+                  projects.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3>Projects &amp; Awards</h3>
+            <ul>
+              <li>
+                Sistem Informasi Kelurahan: E-government web platform for public
+                service management.
+              </li>
+              <li>WaterEye: cloud-based water quality monitoring solution.</li>
+              <li>
+                Chatbot Internal: internal support system to improve service
+                efficiency.
+              </li>
+              <li>Best System Project — Capstone Project PPSI UNIB (2025).</li>
+              <li>
+                Contribution Award for Program Accreditation (OBE/CPL System)
+                (2025).
+              </li>
+            </ul>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
