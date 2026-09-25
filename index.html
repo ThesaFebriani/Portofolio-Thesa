@@ -352,14 +352,14 @@
                 <button
                   type="button"
                   class="project-link-btn ghost js-open-video"
-                  data-video-src="videos/WaterEye Persentation.mp4"
+                  data-video-src="https://youtu.be/oStVo4WdXvw"
                 >
                   Presentation
                 </button>
                 <button
                   type="button"
                   class="project-link-btn ghost js-open-video"
-                  data-video-src="videos/Water Eye Demo Final (8).mp4"
+                  data-video-src="https://youtu.be/1AHnVIEVloo"
                 >
                   Demo
                 </button>
@@ -481,29 +481,28 @@
       </section>
     </main>
 
-    <!-- Video modal for project demos -->
+  <!-- Video modal for project demos -->
     <div id="videoModal" class="video-modal" aria-hidden="true">
       <div class="video-modal-backdrop js-close-video"></div>
       <div class="video-modal-content" role="dialog" aria-modal="true">
         <button class="video-close js-close-video" aria-label="Close">✕</button>
         <div class="video-player-wrap">
-          <video
+          <iframe
             id="projectVideo"
-            controls
-            playsinline
-            preload="metadata"
-          ></video>
+            allow="autoplay; fullscreen"
+            style="width: 100%; aspect-ratio: 16/9; background: #000; border: none; border-radius: 8px;"
+          ></iframe>
         </div>
         <div class="video-choices">
           <button
             class="video-choice"
-            data-src="videos/WaterEye Persentation.mp4"
+            data-src="https://www.youtube.com/embed/oStVo4WdXvw"
           >
             Presentation
           </button>
           <button
             class="video-choice"
-            data-src="videos/Water Eye Demo Final (8).mp4"
+            data-src="https://www.youtube.com/embed/1AHnVIEVloo"
           >
             Demo
           </button>
@@ -552,13 +551,12 @@
         const closers = document.querySelectorAll(".js-close-video");
         const choices = document.querySelectorAll(".video-choice");
 
-        function openModal(src) {
+       function openModal(src) {
           if (!modal || !videoEl) return;
           modal.classList.add("open");
           modal.setAttribute("aria-hidden", "false");
           videoEl.src = src;
-          videoEl.currentTime = 0;
-          videoEl.play().catch(() => {});
+          
           choices.forEach((c) =>
             c.classList.toggle("active", c.dataset.src === src),
           );
@@ -568,9 +566,7 @@
           if (!modal || !videoEl) return;
           modal.classList.remove("open");
           modal.setAttribute("aria-hidden", "true");
-          try {
-            videoEl.pause();
-          } catch (e) {}
+          
           videoEl.removeAttribute("src");
           choices.forEach((c) => c.classList.remove("active"));
         }
